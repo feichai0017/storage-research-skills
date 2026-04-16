@@ -6,6 +6,10 @@
 - Which state is cached, derived, or advisory?
 - Where does ownership of memory and file handles live?
 
+If this is not an LSM engine, also ask:
+- what is the authoritative page, extent, segment, or catalog structure?
+- what is the checkpoint or flush boundary?
+
 ## Durability
 
 - Is the write protocol explicit?
@@ -23,6 +27,7 @@
 - Are there avoidable copies?
 - Is there hidden I/O or allocation?
 - Did the change alter visibility or iterator semantics?
+- Did the change alter page-cache, buffer-pool, extent-map, or object-index behavior?
 
 ## Tests
 

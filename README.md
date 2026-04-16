@@ -54,7 +54,9 @@ The included references emphasize:
 - single-node storage engines such as RocksDB, Pebble, WiredTiger, Badger
 - OLTP systems such as PostgreSQL and InnoDB
 - OLAP systems such as DuckDB and ClickHouse
-- distributed systems such as TiDB/TiKV, CockroachDB, FoundationDB, YugabyteDB, Spanner
+- distributed databases and KV systems such as TiDB/TiKV, CockroachDB, FoundationDB, YugabyteDB, Spanner
+- distributed file systems such as HDFS, CephFS, Lustre, JuiceFS, SeaweedFS
+- object stores such as S3, MinIO, Ceph RGW, Swift
 - protocol families such as Raft, Paxos, Viewstamped Replication, Zab, EPaxos, Percolator
 - top venues across databases, systems, storage, and distributed protocols
 - recent venue signals for hotspot scouting

@@ -34,6 +34,21 @@ The point is not completeness. The point is to avoid designing or writing in a v
 - Spanner: externally-consistent distributed database; TrueTime-centered design is a recurring reference point.
 - HBase/Bigtable lineage: tablet-based serving, log-structured storage, background compaction, operational scale.
 
+### Distributed File Systems
+
+- HDFS: classic split between namespace service and block replication; useful for metadata authority and recovery questions.
+- CephFS: POSIX-ish DFS on top of distributed object storage; useful for metadata/data separation, failover, and recovery.
+- Lustre: large-scale parallel file system; useful for metadata server, object storage target, and namespace scaling tradeoffs.
+- JuiceFS: metadata + object-store-backed file system; useful when studying decoupled metadata and object placement.
+- SeaweedFS: file/object store with volume and filer split; useful for namespace and placement tradeoffs.
+
+### Object Storage Systems
+
+- Amazon S3: service-model reference for bucket/object semantics, multipart upload, and consistency expectations.
+- MinIO: practical open-source object store; useful for erasure coding, healing, and object metadata paths.
+- Ceph RGW: object interface on top of Ceph; useful for metadata/data boundary and multi-protocol serving.
+- OpenStack Swift: useful for ring-based placement, repair, and metadata propagation.
+
 ### Distributed Protocol And Coordination References
 
 - Raft: understand leader-based replicated state machines and operational simplicity claims.
@@ -55,6 +70,7 @@ Compare by axis:
 - transaction model
 - compaction or maintenance model
 - operator-facing degraded mode
+- namespace, rename, snapshot, or object-visibility semantics
 
 ## Top Conferences By Subfield
 

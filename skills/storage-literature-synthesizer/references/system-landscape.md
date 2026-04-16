@@ -43,6 +43,36 @@ Good for topics such as:
 - analytical concurrency control
 - local versus distributed OLAP tradeoffs
 
+## Distributed File Systems
+
+- HDFS
+- CephFS
+- Lustre
+- JuiceFS
+- SeaweedFS
+
+Good for topics such as:
+- namespace service design
+- metadata and chunk-placement separation
+- rename and snapshot semantics
+- lease recovery and client cache consistency
+- data repair, rebalance, and scrub behavior
+
+## Object Storage Systems
+
+- Amazon S3 as the service model reference
+- Ceph RGW
+- MinIO
+- SeaweedFS object layer
+- OpenStack Swift
+
+Good for topics such as:
+- bucket/object metadata layout
+- multipart upload and versioning semantics
+- erasure coding, healing, and rebuild paths
+- lifecycle/tiering and object visibility
+- metadata versus data placement authority
+
 ## Distributed Databases And KV Stores
 
 - TiDB / TiKV
@@ -85,3 +115,4 @@ Choose comparison systems that share at least one hard axis with the target work
 - same transaction model
 - same maintenance path
 - same failure or recovery concern
+- same namespace or object-visibility semantics

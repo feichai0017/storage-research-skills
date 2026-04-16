@@ -1,6 +1,6 @@
 ---
 name: storage-engine-coder
-description: Implement or refactor storage-engine and database internals such as LSM trees, WAL, MVCC, iterators, compaction, recovery, snapshots, file formats, and hot read/write paths. Use when writing low-level code or tests where invariants, durability, and lifecycle safety matter more than API polish.
+description: Implement or refactor single-node storage-engine and database internals such as LSM trees, B-trees, WAL, MVCC, iterators, compaction, checkpoints, snapshots, file formats, metadata indexes, and hot read/write paths. Use when writing low-level code or tests where invariants, durability, and lifecycle safety matter more than API polish.
 ---
 
 # Storage Engine Coder
@@ -45,6 +45,7 @@ For engine work, inspect:
 - startup strictness on missing or corrupt state
 - shutdown and admission gating
 - interactions between WAL, memtable, compaction, snapshots, and value separation
+- catalog, page, extent, or object-metadata consistency when the engine is not LSM-based
 
 Use `references/implementation-checklist.md` when you need the detailed checklist.
 
