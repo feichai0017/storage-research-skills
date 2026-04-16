@@ -1,4 +1,4 @@
 interface:
   display_name: "Storage Literature Synthesizer"
   short_description: "Extract design constraints and position prior work"
-  default_prompt: "Use $storage-literature-synthesizer to digest storage, database, or distributed-systems papers into design constraints, assumptions, overlap surfaces, and positioning."
+  default_prompt: "Use $storage-literature-synthesizer to digest storage, database, or distributed-systems papers into design constraints, assumptions, overlap surfaces, and related-work positioning."

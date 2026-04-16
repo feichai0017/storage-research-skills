@@ -45,7 +45,7 @@ The intended flow is:
 ### Analysis
 
 - `storage-literature-synthesizer`
-  Read papers and systems as design constraints, overlap surfaces, and hotspot families.
+  Read papers and systems as design constraints, overlap surfaces, and related-work framing.
 - `distributed-storage-safety-review`
   Review authority, durability, visibility, repair, rebalance, and degraded-mode boundaries across system classes.
 
