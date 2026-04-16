@@ -1,6 +1,6 @@
 ---
 name: storage-research-workflow
-description: Run an end-to-end workflow for storage, database, and distributed-systems research ideas: find directions, test whether the problem is real, search prior art, judge feasibility, assess novelty, estimate likely venue level, and decide whether to invest in implementation or writing. Use when triaging a new idea or deciding whether an existing prototype is publishable.
+description: Run an end-to-end workflow for storage, database, and distributed-systems research ideas: scout hotspots, mine directions, test whether the problem is real, search prior art, judge feasibility, assess novelty, estimate likely venue level, and decide whether to invest in implementation or writing. Use when actively looking for topics, triaging a new idea, or deciding whether an existing prototype is publishable.
 ---
 
 # Storage Research Workflow
@@ -13,6 +13,7 @@ It is meant to stop weak ideas early and concentrate effort on problems with rea
 ## What This Skill Produces
 
 The output should include:
+- a hotspot or pressure map when the user has no idea yet
 - a one-paragraph problem framing
 - a five-dimension scorecard
 - a prior-art and overlap judgment
@@ -26,24 +27,52 @@ The output should include:
 
 Do not ask "is this cool?"
 Ask, in order:
-1. Is this a real problem?
-2. Has this already been done closely enough?
-3. Can we actually build and evaluate it?
-4. Is the contribution strong enough for a target venue?
+1. Why is this topic hot now?
+2. Is there a real systems pressure hiding under the hype?
+3. Has this already been done closely enough?
+4. Can we actually build and evaluate it?
+5. Is the contribution strong enough for a target venue?
 
 ## Workflow Funnel
 
-1. Choose the topic source.
-2. Validate that the problem is real.
-3. Search industrial systems and academic prior art.
-4. Frame the precise contribution candidate.
-5. Judge build feasibility.
-6. Judge evaluation feasibility.
-7. Judge novelty and contribution depth.
-8. Estimate venue band.
-9. Decide go, pivot, or kill.
+1. Scout hotspots and pressure points.
+2. Mine concrete idea candidates from those hotspots.
+3. Normalize the candidate into an intake.
+4. Validate that the problem is real.
+5. Search industrial systems and academic prior art.
+6. Frame the precise contribution candidate.
+7. Run the fantasy detector.
+8. Judge build feasibility.
+9. Judge evaluation feasibility.
+10. Judge novelty and contribution depth.
+11. Estimate venue band.
+12. Decide go, pivot, or kill.
 
-## Step 1: Choose The Topic Source
+## Step 1: Scout Hotspots And Pressure Points
+
+When the user does not already have an idea, start from public research signals:
+- recent accepted papers in top venues
+- recent workshop themes
+- conference CFP topic lists
+- keynote themes
+- repeated engineering pain in serious open-source systems
+
+Do not confuse a hot keyword with a good problem.
+The goal is to locate repeated pressure, not to imitate titles.
+
+Use `references/hotspot-scouting.md` for the scouting workflow.
+
+## Step 2: Mine Candidate Ideas
+
+Turn hotspot observations into candidate problems by asking:
+- what recurring bottleneck or semantic gap appears behind this trend?
+- which assumptions are currently hand-waved?
+- where are systems falling back to hidden heuristics, silent repair, or unclear service semantics?
+- what narrow slice could be built and falsified quickly?
+
+Use `references/idea-mining.md` for the mining patterns.
+
+## Step 3: Choose The Topic Source
 
 Valid sources:
 - recurring engineering pain in a real system
@@ -57,7 +86,7 @@ Weak sources:
 - "I can implement this quickly"
 - "nobody seems to have named it exactly this way"
 
-## Step 2: Validate The Problem Is Real
+## Step 4: Validate The Problem Is Real
 
 Check:
 - who pays the cost today
@@ -68,7 +97,7 @@ Check:
 
 Use `references/workflow-funnel.md` for the full gate questions.
 
-## Step 3: Search Prior Art
+## Step 5: Search Prior Art
 
 Search three layers:
 - industrial systems and open-source exemplars
@@ -83,7 +112,7 @@ When searching, use primary sources where possible:
 The question is not only "has anyone done this?"
 The question is "has anyone already occupied this claim boundary closely enough that our version would look incremental?"
 
-## Step 4: Frame The Contribution Candidate
+## Step 6: Frame The Contribution Candidate
 
 Force the idea into one of these shapes:
 - new system boundary
@@ -95,7 +124,21 @@ Force the idea into one of these shapes:
 
 If the only answer is "a cleaner implementation", the idea is probably too weak.
 
-## Step 5: Judge Feasibility
+## Step 7: Run The Fantasy Detector
+
+Before spending time on implementation, try to kill the idea aggressively.
+This is the "玄幻检测" step.
+
+Ask:
+- is the problem real, or only fashionable?
+- is the mechanism actually different, or just new vocabulary on an old pattern?
+- are we relying on impossible scale, unavailable traces, or unfair baselines?
+- would a skeptical reviewer say "this is just X with a new wrapper"?
+- does the hoped-for claim exceed the artifact that can realistically be built?
+
+Use `references/fantasy-detector.md`.
+
+## Step 8: Judge Feasibility
 
 Judge two things separately:
 - build feasibility
@@ -107,7 +150,7 @@ An idea is weak if:
 - it needs months of engineering before the first falsifiable result
 - it cannot be evaluated against a believable competing design
 
-## Step 6: Judge Novelty
+## Step 9: Judge Novelty
 
 Novelty is not a vibe. Score it by:
 - claim overlap with prior papers
@@ -118,7 +161,7 @@ Novelty is not a vibe. Score it by:
 
 Use `references/novelty-rubric.md` when you need a stricter ladder.
 
-## Step 7: Estimate Venue Band
+## Step 10: Estimate Venue Band
 
 Estimate the best plausible band, not the dream venue.
 
@@ -130,7 +173,7 @@ Typical bands:
 
 Use `references/venue-band-rubric.md` for the actual bar.
 
-## Step 8: Final Decision
+## Step 11: Final Decision
 
 Choose one:
 - `GO`: real problem, manageable overlap, feasible build and eval, credible venue band
@@ -141,14 +184,15 @@ Choose one:
 
 Always return:
 1. idea statement
-2. five-dimension scorecard
-3. real-problem verdict
-4. prior-art verdict
-5. feasibility verdict
-6. novelty verdict
-7. likely venue band
-8. go / pivot / kill
-9. next 2-3 concrete actions
+2. hotspot or pressure source
+3. five-dimension scorecard
+4. real-problem verdict
+5. prior-art verdict
+6. feasibility verdict
+7. novelty verdict
+8. likely venue band
+9. go / pivot / kill
+10. next 2-3 concrete actions
 
 ## Scorecard Rule
 
@@ -166,6 +210,12 @@ Use `references/scorecard.md` for the scoring scale and return format.
 When the user provides a new idea, normalize it into the intake template before judging it.
 Use `references/idea-intake-template.md` for the template.
 
+When the user asks for topic discovery instead of scoring an existing idea:
+1. scout hotspots
+2. list candidate tensions
+3. pick 3-5 candidate ideas
+4. run the same scorecard and fantasy detector on each one
+
 ## Relationship To Other Skills
 
 This is the orchestrator.
@@ -179,6 +229,10 @@ When a branch becomes concrete, use:
 
 Load only what you need:
 - `references/workflow-funnel.md` for the full end-to-end decision process
+- `references/hotspot-scouting.md` for active topic discovery
+- `references/idea-mining.md` for turning trends into idea candidates
+- `references/fantasy-detector.md` for strict anti-hype feasibility checks
+- `references/hotspot-examples-2024-2025.md` for recent example hotspots from public venue signals
 - `references/scorecard.md` for the five-dimension quantitative output
 - `references/idea-intake-template.md` for normalizing new ideas into a consistent intake form
 - `references/novelty-rubric.md` for judging contribution depth

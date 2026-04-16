@@ -1,6 +1,6 @@
 ---
 name: storage-literature-synthesizer
-description: Read storage, database, and distributed-systems papers and turn them into reusable design constraints, assumptions, mechanisms, and positioning. Use when surveying a topic, extracting implementation ideas, comparing systems, or building related-work and novelty framing.
+description: Read storage, database, and distributed-systems papers and turn them into reusable design constraints, assumptions, mechanisms, positioning, and hotspot maps. Use when surveying a topic, discovering emerging directions, extracting implementation ideas, comparing systems, or building related-work and novelty framing.
 ---
 
 # Storage Literature Synthesizer
@@ -17,6 +17,7 @@ The output should be a design map, not a generic summary.
 3. Distinguish what is authoritative from what is optimization or packaging.
 4. Build a comparison table against adjacent systems.
 5. Translate the paper into reusable research pressure for your own work.
+6. Cluster repeated papers into hotspot families when the user asks for topic discovery.
 
 ## Reading Questions
 
@@ -62,6 +63,7 @@ Common outputs:
 - design lineage from older systems to newer ones
 - related-work section material
 - novelty-boundary note for your own project
+- hotspot map from recent venue signals
 
 ## Failure Modes To Avoid
 
@@ -76,3 +78,4 @@ Load only what you need:
 - `references/paper-digest-template.md` for structured paper digestion
 - `references/system-landscape.md` for industrial/open-source reference systems worth comparing against
 - `references/venue-map.md` for top conferences and journals by subfield
+- `references/hotspot-reading.md` for turning recent accepted papers and CFPs into hotspot maps

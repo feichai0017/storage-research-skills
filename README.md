@@ -3,6 +3,8 @@
 Codex skills for storage, databases, and distributed-systems research.
 
 This repository packages a small workflow-oriented skill set for:
+- scouting hotspots from top venues and systems signals
+- mining candidate research ideas from those hotspots
 - triaging research ideas
 - surveying papers and systems
 - planning claims, invariants, and milestones
@@ -14,7 +16,7 @@ This repository packages a small workflow-oriented skill set for:
 ## Included Skills
 
 - `storage-research-workflow`
-  End-to-end idea triage: real problem, prior art, feasibility, novelty, venue band, go/pivot/kill.
+  End-to-end idea discovery and triage: hotspot scouting, idea mining, real problem, prior art, feasibility, novelty, venue band, go/pivot/kill.
 - `storage-research-planner`
   Turn an idea into claims, invariants, experiments, and milestones.
 - `storage-literature-synthesizer`
@@ -55,6 +57,8 @@ The included references emphasize:
 - distributed systems such as TiDB/TiKV, CockroachDB, FoundationDB, YugabyteDB, Spanner
 - protocol families such as Raft, Paxos, Viewstamped Replication, Zab, EPaxos, Percolator
 - top venues across databases, systems, storage, and distributed protocols
+- recent venue signals for hotspot scouting
+- strict anti-hype idea review via a built-in fantasy detector
 
 ## Usage
 
