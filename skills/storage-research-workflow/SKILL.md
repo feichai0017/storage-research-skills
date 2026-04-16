@@ -232,7 +232,6 @@ Load only what you need:
 - `references/hotspot-scouting.md` for active topic discovery
 - `references/idea-mining.md` for turning trends into idea candidates
 - `references/strict-loop-validation.md` for strict loop validation before implementation
-- `references/hotspot-examples-2024-2025.md` for recent example hotspots from public venue signals
 - `references/scorecard.md` for the five-dimension quantitative output
 - `references/idea-intake-template.md` for normalizing new ideas into a consistent intake form
 - `references/novelty-rubric.md` for judging contribution depth
