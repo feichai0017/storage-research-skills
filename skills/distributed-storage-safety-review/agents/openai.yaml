@@ -1,4 +1,4 @@
 interface:
   display_name: "Distributed Storage Safety Review"
-  short_description: "Audit correctness and safety boundaries"
-  default_prompt: "Use $distributed-storage-safety-review to review a storage or distributed-systems design for correctness, durability, recovery, and control-plane safety."
+  short_description: "Audit authority, durability, and safety boundaries"
+  default_prompt: "Use $distributed-storage-safety-review to review a storage, database, distributed-system, file-system, or object-storage design for authority, durability, recovery, visibility, and degraded-mode safety."

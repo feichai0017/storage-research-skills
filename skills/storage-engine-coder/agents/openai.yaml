@@ -1,4 +1,4 @@
 interface:
   display_name: "Storage Engine Coder"
-  short_description: "Implement storage-engine internals carefully"
-  default_prompt: "Use $storage-engine-coder to implement or refactor storage-engine internals with explicit invariants, tests, and recovery semantics."
+  short_description: "Implement engine internals with correctness-first discipline"
+  default_prompt: "Use $storage-engine-coder to implement or refactor single-node storage-engine or database internals with explicit invariants, targeted tests, and recovery semantics."
