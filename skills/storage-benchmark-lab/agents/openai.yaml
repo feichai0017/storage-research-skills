@@ -1,0 +1,4 @@
+interface:
+  display_name: "Storage Benchmark Lab"
+  short_description: "Design credible performance and fault studies"
+  default_prompt: "Use $storage-benchmark-lab to design benchmarks, fault injection, profiling, and evidence that support storage-systems claims."

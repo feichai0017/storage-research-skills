@@ -1,0 +1,4 @@
+interface:
+  display_name: "Storage Literature Synthesizer"
+  short_description: "Extract and position storage systems papers"
+  default_prompt: "Use $storage-literature-synthesizer to digest storage or distributed-systems papers into design choices, assumptions, and positioning."

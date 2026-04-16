@@ -1,0 +1,4 @@
+interface:
+  display_name: "Storage Research Planner"
+  short_description: "Scope storage and distributed systems research"
+  default_prompt: "Use $storage-research-planner to scope a storage or distributed-systems research problem into claims, invariants, experiments, and milestones."

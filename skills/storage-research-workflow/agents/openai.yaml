@@ -1,0 +1,4 @@
+interface:
+  display_name: "Storage Research Workflow"
+  short_description: "Run end-to-end systems research triage"
+  default_prompt: "Use $storage-research-workflow to evaluate a storage or distributed-systems idea for problem reality, prior art, feasibility, novelty, and likely paper level."

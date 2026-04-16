@@ -1,0 +1,4 @@
+interface:
+  display_name: "Storage Systems Paper Writer"
+  short_description: "Write evidence-bounded systems papers"
+  default_prompt: "Use $storage-systems-paper-writer to turn a storage or distributed-systems implementation into a paper draft, outline, evaluation narrative, or rebuttal."
