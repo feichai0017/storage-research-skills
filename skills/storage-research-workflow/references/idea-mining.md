@@ -19,7 +19,6 @@ Good output:
 - explicit freshness contract
 - answerability contract
 - strict degraded-mode contract
-- stateless-client metadata serving contract
 
 ### Pattern 2: Authority Gap
 
