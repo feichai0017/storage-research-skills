@@ -117,8 +117,56 @@ The included references currently emphasize:
 
 ## Install / Sync
 
-Copy or sync the desired skill folders into your local Codex skills directory.
-The repository is designed so you can install the whole toolkit or only the pieces you actually use.
+Codex loads local skills from `~/.codex/skills` by default.
+You can install the whole toolkit or only the skill folders you actually want.
+
+### Install The Whole Toolkit
+
+```bash
+git clone https://github.com/feichai0017/storage-research-skills.git
+cd storage-research-skills
+mkdir -p ~/.codex/skills
+rsync -a skills/ ~/.codex/skills/
+```
+
+### Install One Skill Only
+
+```bash
+git clone https://github.com/feichai0017/storage-research-skills.git
+cd storage-research-skills
+mkdir -p ~/.codex/skills
+rsync -a skills/storage-research-workflow/ ~/.codex/skills/storage-research-workflow/
+```
+
+### Update Local Skills
+
+```bash
+cd storage-research-skills
+git pull
+rsync -a skills/ ~/.codex/skills/
+```
+
+After syncing, start a new Codex session if the skill list does not refresh automatically.
+
+## Usage
+
+Call a skill by name in your prompt.
+Typical examples:
+
+```text
+Use $storage-research-workflow to evaluate this idea: ...
+Use $storage-research-workflow to scout 3 candidate topics in distributed storage.
+Use $storage-literature-synthesizer to position this design against prior work.
+Use $distributed-storage-safety-review to audit this metadata or control-plane design.
+Use $storage-benchmark-lab to design an evaluation plan for this claim.
+Use $storage-systems-paper-writer to turn this prototype into a workshop paper outline.
+```
+
+Recommended starting points:
+- use `storage-research-workflow` when you are still finding or filtering topics
+- use `storage-literature-synthesizer` when you already have a topic and need prior-art clarity
+- use `distributed-storage-safety-review` when the design touches authority, durability, visibility, or repair semantics
+- use `storage-benchmark-lab` when you are about to make performance or recovery claims
 
 ## Status
 
