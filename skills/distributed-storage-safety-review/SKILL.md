@@ -63,3 +63,4 @@ Use `references/review-checklist.md` when you need the detailed prompts.
 
 Load only what you need:
 - `references/review-checklist.md` for distributed-safety review prompts
+- `references/cross-system-review-rubric.md` for a stronger cross-system rubric across engines, databases, file systems, and object stores

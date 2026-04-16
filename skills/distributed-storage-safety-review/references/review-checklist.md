@@ -15,7 +15,8 @@ Adapt the prompts to the system class instead of forcing a KV-centric review.
 - What is the single authoritative source for each kind of metadata?
 - Are there parallel truths across config, local manifest, runtime cache, or coordinator service?
 
-For file systems and object stores also ask:
+### File / Object Extension
+
 - what is authoritative for namespace metadata?
 - what is authoritative for object placement or chunk location?
 - can background repair or garbage collection race the namespace truth?
@@ -25,10 +26,12 @@ For file systems and object stores also ask:
 - Can local code mutate replicated metadata without going through apply or consensus?
 - Are admin paths narrower and more constrained than normal writes?
 
-For databases also ask:
+### Database Extension
+
 - can schema, catalog, or transaction-visible state move through side channels?
 
-For DFS/object systems also ask:
+### DFS / Object Extension
+
 - can rebalancing, scrub, healing, or multipart completion mutate visible state outside the normal authority path?
 
 ## Recovery
@@ -37,7 +40,8 @@ For DFS/object systems also ask:
 - Does startup fail fast, repair silently, or diverge?
 - Can a restarted node serve stale or unsafe state before catch-up completes?
 
-For file/object systems also ask:
+### File / Object Extension
+
 - what happens when data blocks exist but namespace metadata does not, or vice versa?
 - what happens when index/manifests point to missing extents, chunks, or object parts?
 
@@ -47,7 +51,8 @@ For file/object systems also ask:
 - Is freshness explicit or hidden behind retries and stale caches?
 - Are lease transfer and allocator lower bounds rooted in one authority?
 
-For systems without a centralized coordinator, reinterpret this section as:
+### No-Central-Coordinator Extension
+
 - what is the placement, membership, or namespace control surface?
 - how are stale routing and stale ownership detected and exposed?
 

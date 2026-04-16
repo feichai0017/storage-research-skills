@@ -42,6 +42,17 @@ Signals:
 Underlying pressure:
 - distributed storage papers can increasingly win by combining strong systems semantics with practical evaluation, not only by building larger clusters
 
+### AI Training Pipelines Reopen Metadata And Namespace Questions
+
+Signals:
+- NSDI 2026 includes FalconFS, a distributed file system for large-scale deep learning pipelines.
+- Current systems and workshop discussions increasingly treat AI pipelines as metadata-heavy storage workloads, not just throughput workloads.
+
+Underlying pressure:
+- stateless or weakly stateful clients push more namespace logic server-side
+- metadata freshness, negative lookup semantics, and degraded-mode behavior become first-class system questions
+- object-backed file systems and training-oriented DFS designs reopen old namespace-consistency tradeoffs under new workload pressure
+
 ## How To Use These Examples
 
 Do not copy the topic label.
