@@ -1,6 +1,6 @@
 ---
-name: distributed-storage-safety-review
-description: Review storage, database, distributed-systems, distributed-file-system, and object-storage designs or code for correctness, durability, recovery, membership safety, metadata discipline, and lifecycle robustness. Use when auditing a PR, design doc, incident, test plan, or research roadmap involving replicated state, storage metadata, namespace service, control-plane logic, or distributed data movement.
+name: "distributed-storage-safety-review"
+description: "Review storage, database, distributed-systems, distributed-file-system, and object-storage designs or code for correctness, durability, recovery, membership safety, metadata discipline, and lifecycle robustness. Use when auditing a PR, design doc, incident, test plan, or research roadmap involving replicated state, storage metadata, namespace service, control-plane logic, or distributed data movement."
 ---
 
 # Distributed Storage Safety Review

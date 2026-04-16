@@ -1,6 +1,6 @@
 ---
-name: storage-benchmark-lab
-description: Design and interpret trustworthy performance studies, failure injection, recovery tests, and profiling runs for storage, database, and distributed systems. Use when making latency or throughput claims, comparing baselines, validating optimizations, or proving a fix survives load and faults.
+name: "storage-benchmark-lab"
+description: "Design and interpret trustworthy performance studies, failure injection, recovery tests, and profiling runs for storage, database, and distributed systems. Use when making latency or throughput claims, comparing baselines, validating optimizations, or proving a fix survives load and faults."
 ---
 
 # Storage Benchmark Lab

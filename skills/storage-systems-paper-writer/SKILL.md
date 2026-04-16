@@ -1,6 +1,6 @@
 ---
-name: storage-systems-paper-writer
-description: Write storage, database, and distributed-systems papers, design notes, evaluation narratives, and rebuttals from real implementation and evidence. Use when turning a system or prototype into a workshop or conference paper while keeping claims bounded to what the artifact and experiments actually support.
+name: "storage-systems-paper-writer"
+description: "Write storage, database, and distributed-systems papers, design notes, evaluation narratives, and rebuttals from real implementation and evidence. Use when turning a system or prototype into a workshop or conference paper while keeping claims bounded to what the artifact and experiments actually support."
 ---
 
 # Storage Systems Paper Writer

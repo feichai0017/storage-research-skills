@@ -1,6 +1,6 @@
 ---
-name: storage-literature-synthesizer
-description: Read storage, database, and distributed-systems papers and turn them into reusable design constraints, assumptions, mechanisms, positioning, and hotspot maps. Use when surveying a topic, discovering emerging directions, extracting implementation ideas, comparing systems, or building related-work and novelty framing.
+name: "storage-literature-synthesizer"
+description: "Read storage, database, and distributed-systems papers and turn them into reusable design constraints, assumptions, mechanisms, positioning, and hotspot maps. Use when surveying a topic, discovering emerging directions, extracting implementation ideas, comparing systems, or building related-work and novelty framing."
 ---
 
 # Storage Literature Synthesizer

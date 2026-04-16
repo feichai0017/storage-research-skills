@@ -1,6 +1,6 @@
 ---
-name: storage-engine-coder
-description: Implement or refactor single-node storage-engine and database internals such as LSM trees, B-trees, WAL, MVCC, iterators, compaction, checkpoints, snapshots, file formats, metadata indexes, and hot read/write paths. Use when writing low-level code or tests where invariants, durability, and lifecycle safety matter more than API polish.
+name: "storage-engine-coder"
+description: "Implement or refactor single-node storage-engine and database internals such as LSM trees, B-trees, WAL, MVCC, iterators, compaction, checkpoints, snapshots, file formats, metadata indexes, and hot read/write paths. Use when writing low-level code or tests where invariants, durability, and lifecycle safety matter more than API polish."
 ---
 
 # Storage Engine Coder

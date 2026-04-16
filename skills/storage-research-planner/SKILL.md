@@ -1,6 +1,6 @@
 ---
-name: storage-research-planner
-description: Plan and steer storage, database, and distributed-systems research from problem framing to claim scoping, invariants, experiments, and milestones. Use when starting a new topic, turning engineering pain into a research question, decomposing a large agenda, or deciding what to build and measure first.
+name: "storage-research-planner"
+description: "Plan and steer storage, database, and distributed-systems research from problem framing to claim scoping, invariants, experiments, and milestones. Use when starting a new topic, turning engineering pain into a research question, decomposing a large agenda, or deciding what to build and measure first."
 ---
 
 # Storage Research Planner

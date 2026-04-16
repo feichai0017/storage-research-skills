@@ -1,13 +1,13 @@
-# Fantasy Detector
+# Strict Loop Validation
 
-This is the strict anti-hype stage.
-Use it to reject "玄幻课题" before implementation starts.
+This is the strict loop validation stage, or `严格的循环验证检测`.
+Use it to pressure-test an idea before implementation starts.
 
 ## Core Question
 
 Is this a real systems contribution, or are we projecting a paper onto weak evidence?
 
-## Fantasy Signals
+## Failure Signals
 
 ### Fake Problem
 
@@ -41,7 +41,7 @@ Is this a real systems contribution, or are we projecting a paper onto weak evid
 
 ## Pass Conditions
 
-An idea passes the fantasy detector only if:
+An idea passes strict loop validation only if:
 - the problem survives simplification
 - the boundary is still distinct after comparing with closest prior work
 - the first real artifact is buildable

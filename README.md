@@ -1,36 +1,78 @@
 # Storage Research Skills
 
-Codex skills for storage, databases, and distributed-systems research.
+Codex skills for storage, database, distributed-systems, distributed-file-system, and object-storage research.
 
-This repository packages a small workflow-oriented skill set for:
-- scouting hotspots from top venues and systems signals
-- mining candidate research ideas from those hotspots
-- triaging research ideas
-- surveying papers and systems
-- planning claims, invariants, and milestones
-- implementing storage-engine internals carefully
-- reviewing distributed-systems safety boundaries
-- designing benchmarks and fault studies
-- drafting systems papers
+## Why This Repo Exists
+
+This repository is a single-theme research toolkit, not a generic skill marketplace.
+It exists to make storage and systems research more disciplined by standardizing:
+- topic discovery from real pressure rather than trend chasing
+- idea triage before implementation
+- prior-art and system-landscape review
+- correctness-first implementation and benchmarking
+- paper framing with bounded claims
+
+## What You Get
+
+The repository packages a compact research workflow for:
+- scouting hotspot and pressure signals
+- mining and triaging candidate ideas
+- planning claim scope, invariants, and milestones
+- reading papers as reusable system constraints
+- reviewing safety boundaries across engines, databases, file systems, and object stores
+- designing credible benchmark and fault evidence
+- writing workshop and conference papers without inflating novelty
+
+## Research Workflow
+
+The intended flow is:
+1. discover topic pressure with `storage-research-workflow`
+2. normalize and triage the idea with intake, scorecard, and strict loop validation
+3. deepen prior-art and system comparison with `storage-literature-synthesizer`
+4. plan claims, invariants, experiments, and milestones with `storage-research-planner`
+5. implement or refactor narrow system paths with `storage-engine-coder`
+6. review correctness and lifecycle boundaries with `distributed-storage-safety-review`
+7. produce benchmark and failure evidence with `storage-benchmark-lab`
+8. write the design note or paper with `storage-systems-paper-writer`
 
 ## Included Skills
 
+### Discovery
+
 - `storage-research-workflow`
-  End-to-end idea discovery and triage: hotspot scouting, idea mining, real problem, prior art, feasibility, novelty, venue band, go/pivot/kill.
+  End-to-end topic discovery and triage: hotspot scouting, idea mining, real-problem checks, prior art, feasibility, novelty, venue band, and go/pivot/kill.
+
+### Analysis
+
+- `storage-literature-synthesizer`
+  Read papers and systems as design constraints, overlap surfaces, and hotspot families.
+- `distributed-storage-safety-review`
+  Review authority, durability, visibility, repair, rebalance, and degraded-mode boundaries across system classes.
+
+### Building
+
 - `storage-research-planner`
   Turn an idea into claims, invariants, experiments, and milestones.
-- `storage-literature-synthesizer`
-  Read papers and systems as design constraints instead of generic summaries.
 - `storage-engine-coder`
-  Implement and refactor LSM/WAL/MVCC/recovery paths with correctness-first discipline.
-- `distributed-storage-safety-review`
-  Review control-plane, replication, durability, and recovery boundaries.
+  Implement and refactor storage-engine and database internals with correctness-first discipline.
 - `storage-benchmark-lab`
-  Design credible benchmarks, fault injection, and evidence.
-- `storage-systems-paper-writer`
-  Write workshop/conference papers and design notes with bounded claims.
+  Design benchmark, profiling, recovery, and fault-injection evidence.
 
-## Layout
+### Writing
+
+- `storage-systems-paper-writer`
+  Write workshop and conference papers, design notes, and rebuttals with bounded claims.
+
+## Recommended Entry Points
+
+Typical prompts:
+- `Use $storage-research-workflow to evaluate this idea: ...`
+- `Use $storage-research-workflow to scout 3 candidate topics in distributed storage.`
+- `Use $storage-research-planner to turn this topic into a claim and experiment plan.`
+- `Use $storage-literature-synthesizer to position this design against prior work.`
+- `Use $distributed-storage-safety-review to audit this control-plane or metadata design.`
+
+## Repository Layout
 
 ```text
 skills/
@@ -43,35 +85,42 @@ skills/
   storage-systems-paper-writer/
 ```
 
-Each skill follows the Codex skill layout:
-- `SKILL.md`
-- `agents/openai.yaml`
-- optional `references/`
+Each skill follows the same compact layout:
+- `SKILL.md` for the workflow and trigger description
+- `agents/openai.yaml` for UI metadata
+- `references/` for load-on-demand detail
 
-## Current Focus
+## Design Principles
 
-The included references emphasize:
+- `one skill, one job`
+  Each skill owns one stable responsibility. System-class variation lives in references, not in a god-skill.
+- `workflow first`
+  Skills are grouped by research lifecycle, not by product category.
+- `references over bloated SKILL.md`
+  Keep `SKILL.md` lean and move detail into load-on-demand references.
+- `systems-first, evidence-first`
+  Prefer explicit boundaries, falsifiable claims, and negative-path evidence over broad hype.
+- `strict loop validation before build`
+  Topic triage should aggressively test problem reality, overlap, feasibility, and evidence burden before implementation starts.
+
+## Scope
+
+The included references currently emphasize:
 - single-node storage engines such as RocksDB, Pebble, WiredTiger, Badger
-- OLTP systems such as PostgreSQL and InnoDB
-- OLAP systems such as DuckDB and ClickHouse
+- OLTP systems such as PostgreSQL, MySQL/InnoDB, SQLite
+- OLAP systems such as DuckDB, ClickHouse, StarRocks
 - distributed databases and KV systems such as TiDB/TiKV, CockroachDB, FoundationDB, YugabyteDB, Spanner
 - distributed file systems such as HDFS, CephFS, Lustre, JuiceFS, SeaweedFS
 - object stores such as S3, MinIO, Ceph RGW, Swift
 - protocol families such as Raft, Paxos, Viewstamped Replication, Zab, EPaxos, Percolator
-- top venues across databases, systems, storage, and distributed protocols
-- recent venue signals for hotspot scouting
-- strict anti-hype idea review via a built-in fantasy detector
+- top conferences and journals across databases, systems, storage, and distributed protocols
 
-## Usage
+## Install / Sync
 
-Install or copy the desired skill folders into your local Codex skills directory.
-
-Typical entrypoints:
-- `Use $storage-research-workflow to evaluate this idea: ...`
-- `Use $storage-research-planner to turn this topic into a claim and experiment plan.`
-- `Use $storage-literature-synthesizer to position this design against prior work.`
+Copy or sync the desired skill folders into your local Codex skills directory.
+The repository is designed so you can install the whole toolkit or only the pieces you actually use.
 
 ## Status
 
-This repository currently tracks a practical research workflow rather than a polished public release.
-The skills are optimized for active systems research on storage and distributed-systems topics.
+This repository tracks an actively used research workflow rather than a polished marketplace release.
+The current focus is practical systems research on storage and distributed-systems topics.

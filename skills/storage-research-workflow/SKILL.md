@@ -1,6 +1,6 @@
 ---
-name: storage-research-workflow
-description: Run an end-to-end workflow for storage, database, and distributed-systems research ideas: scout hotspots, mine directions, test whether the problem is real, search prior art, judge feasibility, assess novelty, estimate likely venue level, and decide whether to invest in implementation or writing. Use when actively looking for topics, triaging a new idea, or deciding whether an existing prototype is publishable.
+name: "storage-research-workflow"
+description: "Run an end-to-end workflow for storage, database, and distributed-systems research ideas: scout hotspots, mine directions, test whether the problem is real, search prior art, judge feasibility, assess novelty, estimate likely venue level, and decide whether to invest in implementation or writing. Use when actively looking for topics, triaging a new idea, or deciding whether an existing prototype is publishable."
 ---
 
 # Storage Research Workflow
@@ -41,7 +41,7 @@ Ask, in order:
 4. Validate that the problem is real.
 5. Search industrial systems and academic prior art.
 6. Frame the precise contribution candidate.
-7. Run the fantasy detector.
+7. Run strict loop validation.
 8. Judge build feasibility.
 9. Judge evaluation feasibility.
 10. Judge novelty and contribution depth.
@@ -124,10 +124,10 @@ Force the idea into one of these shapes:
 
 If the only answer is "a cleaner implementation", the idea is probably too weak.
 
-## Step 7: Run The Fantasy Detector
+## Step 7: Run Strict Loop Validation
 
 Before spending time on implementation, try to kill the idea aggressively.
-This is the "玄幻检测" step.
+This is the strict loop validation stage, or `严格的循环验证检测`.
 
 Ask:
 - is the problem real, or only fashionable?
@@ -136,7 +136,7 @@ Ask:
 - would a skeptical reviewer say "this is just X with a new wrapper"?
 - does the hoped-for claim exceed the artifact that can realistically be built?
 
-Use `references/fantasy-detector.md`.
+Use `references/strict-loop-validation.md`.
 
 ## Step 8: Judge Feasibility
 
@@ -214,7 +214,7 @@ When the user asks for topic discovery instead of scoring an existing idea:
 1. scout hotspots
 2. list candidate tensions
 3. pick 3-5 candidate ideas
-4. run the same scorecard and fantasy detector on each one
+4. run the same scorecard and strict loop validation on each one
 
 ## Relationship To Other Skills
 
@@ -231,7 +231,7 @@ Load only what you need:
 - `references/workflow-funnel.md` for the full end-to-end decision process
 - `references/hotspot-scouting.md` for active topic discovery
 - `references/idea-mining.md` for turning trends into idea candidates
-- `references/fantasy-detector.md` for strict anti-hype feasibility checks
+- `references/strict-loop-validation.md` for strict loop validation before implementation
 - `references/hotspot-examples-2024-2025.md` for recent example hotspots from public venue signals
 - `references/scorecard.md` for the five-dimension quantitative output
 - `references/idea-intake-template.md` for normalizing new ideas into a consistent intake form
